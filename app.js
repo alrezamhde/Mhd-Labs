@@ -21,7 +21,7 @@ const projectCards = projects.map((project, index) => `
     <button class="project-open" type="button" data-project="${index}" aria-label="Play ${project.title}">
       <span class="art">
         <video class="project-video" muted loop playsinline preload="metadata" poster="/media/${project.poster}" aria-hidden="true">
-          <source src="/media/${project.file}" type="video/mp4">
+          <source src="/Mhd-Labs/media/${project.file}" type="video/mp4">
         </video>
         <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
         <span class="play-indicator">${playIcon}</span>
@@ -83,13 +83,13 @@ const aboutPage = `
 
 document.querySelector("#app").innerHTML = `
   <header>
-    <a class="brand" href="/" aria-label="MHD home">MHD<span>®</span></a>
+    <a class="brand" href="/Mhd-Labs/" aria-label="MHD home">MHD<span>®</span></a>
     <div class="header-note"><span>Independent designer</span>Motion &amp; Design</div>
   </header>
   ${isAbout ? aboutPage : workPage}
   <nav class="bottom-nav" aria-label="Main navigation">
-    <a href="/" class="${!isAbout ? "active" : ""}" ${!isAbout ? 'aria-current="page"' : ""}>${workIcon}Work</a>
-    <a href="/about/" class="${isAbout ? "active" : ""}" ${isAbout ? 'aria-current="page"' : ""}>${aboutIcon}About</a>
+    <a href="/Mhd-Labs/" class="${!isAbout ? "active" : ""}" ${!isAbout ? 'aria-current="page"' : ""}>${workIcon}Work</a>
+    <a href="/Mhd-Labs/about/" class="${isAbout ? "active" : ""}" ${isAbout ? 'aria-current="page"' : ""}>${aboutIcon}About</a>
   </nav>
 `;
 
