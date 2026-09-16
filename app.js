@@ -1,5 +1,5 @@
 const pagePath = location.pathname.replace(/\/$/, "");
-const isAbout = pagePath === "/about";
+const isAbout = pagePath.endsWith("/about");
 const projectType = "Motion Graphics · After Effects";
 
 const projects = [
@@ -20,7 +20,7 @@ const projectCards = projects.map((project, index) => `
   <article class="project">
     <button class="project-open" type="button" data-project="${index}" aria-label="Play ${project.title}">
       <span class="art">
-        <video class="project-video" muted loop playsinline preload="metadata" poster="/media/${project.poster}" aria-hidden="true">
+        <video class="project-video" muted loop playsinline preload="metadata" poster="/Mhd-Labs/media/${project.poster}" aria-hidden="true">
           <source src="/Mhd-Labs/media/${project.file}" type="video/mp4">
         </video>
         <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
