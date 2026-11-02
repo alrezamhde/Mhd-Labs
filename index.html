@@ -1,1 +1,342 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b0b"><title>MHD — Motion &amp; Design</title><meta name="description" content="Alireza — motion and product designer. Selected work and a little about me."><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%234bd200%22/%3E%3Cpath%20d%3D%22M7%2024V8l9%209%209-9v16h-5V19l-4%204-4-4v5z%22%20fill%3D%22%23111%22/%3E%3C/svg%3E"><link rel="stylesheet" href="/Mhd-Labs/style.css"><script src="/Mhd-Labs/app.js" defer></script></head><body><div id="app"></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MHD Motion Portfolio</title>
+  <meta name="theme-color" content="#070907">
+  <meta name="description" content="Motion design by Alireza. Six looping projects, one continuous scroll.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%228%22%20fill%3D%22%234bd200%22/%3E%3Cpath%20d%3D%22M7%2024V8l9%209%209-9v16h-5V19l-4%204-4-4v5z%22%20fill%3D%22%23111%22/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="./style.css?v=book-20261012">
+  <script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm');</script>
+  <script src="./vendor/gsap.min.js" defer></script>
+  <script src="./vendor/ScrollTrigger.min.js" defer></script>
+  <script src="./vendor/lenis.min.js" defer></script>
+  <script type="module" src="./app.js?v=book-20261012"></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-panel"></div>
+    <div class="loader-inner">
+      <span class="loader-mark">MHD<sup>®</sup></span>
+      <span class="loader-count"><b>000</b>%</span>
+    </div>
+    <span class="loader-bar"></span>
+  </div>
+
+  <canvas class="gl" id="gl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" data-scroll aria-label="MHD, back to the start">MHD<sup>®</sup></a>
+    <span class="header-role">Alireza <i>/</i> Motion &amp; Design</span>
+    <a class="header-cta" href="#contact" data-scroll>Let’s talk<span class="dot" aria-hidden="true"></span></a>
+  </header>
+
+  <aside class="rail" aria-hidden="true">
+    <span class="rail-count"><b>01</b><i>/ 06</i></span>
+    <span class="rail-track"><span class="rail-fill"></span></span>
+    <span class="rail-name">ChatGPT</span>
+  </aside>
+
+  <main>
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-stage">
+        <p class="hero-eyebrow"><span class="pulse" aria-hidden="true"></span><span>Independent motion designer · Ontario, Canada</span></p>
+        <h1 class="hero-mark" aria-label="MHD">
+          <span class="hl" aria-hidden="true"><span>M</span></span><span class="hl" aria-hidden="true"><span>H</span></span><span class="hl" aria-hidden="true"><span>D</span></span><sup class="hero-reg" aria-hidden="true"><span>®</span></sup>
+        </h1>
+        <div class="hero-foot"><div class="hero-foot-in">
+          <p class="hero-intro">I’m Alireza. I design and animate visual stories for products, brands and creators.</p>
+          <ul class="hero-disciplines">
+            <li>Motion graphics</li><li>SaaS launches</li><li>Tutorials</li><li>Visual design</li>
+          </ul>
+          <p class="hero-scroll"><span class="scroll-line" aria-hidden="true"></span>Scroll to explore</p>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="About">
+      <div class="m-stage">
+        <p class="m-label">Good design. Even better in motion.</p>
+        <p class="m-text"><span class="mw">I</span> <span class="mw">turn</span> <span class="mw">ideas</span> <span class="mw">into</span> <span class="mw">clear,</span> <span class="mw">engaging</span> <span class="mw">visual</span> <span class="mw">stories,</span> <span class="mw">from</span> <span class="mw">SaaS</span> <span class="mw">launches</span> <span class="mw">to</span> <span class="mw">the</span> <span class="mw">reels</span> <span class="mw">people</span> <span class="mw">watch</span> <span class="mw">twice.</span></p>
+        <p class="m-sub"><span>Selected work</span><span>06 projects · each one loops</span></p>
+      </div>
+    </section>
+
+    <section class="project" id="chatgpt" data-layout="right" data-index="0" aria-labelledby="t-chatgpt">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">01</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/chatgpt.webp" data-src="./media/chatgpt.mp4" aria-label="ChatGPT, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">16.0s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>01</b><span>Product promo</span></p>
+          <h2 class="p-title" id="t-chatgpt"><span class="word"><span class="ch">C</span><span class="ch">h</span><span class="ch">a</span><span class="ch">t</span><span class="ch">G</span><span class="ch">P</span><span class="ch">T</span></span></h2>
+          <p class="p-desc">From a simple prompt to a world of visual possibilities.</p>
+          <p class="p-more">A single prompt box opens into a tactile desk scene, then a wall of generated frames.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+    <section class="project" id="delusion" data-layout="left" data-index="1" aria-labelledby="t-delusion">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">02</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/delusion.webp" data-src="./media/delusion.mp4" aria-label="Delusion, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">24.8s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>02</b><span>Tutorial breakdown</span></p>
+          <h2 class="p-title" id="t-delusion"><span class="word"><span class="ch">D</span><span class="ch">e</span><span class="ch">l</span><span class="ch">u</span><span class="ch">s</span><span class="ch">i</span><span class="ch">o</span><span class="ch">n</span></span></h2>
+          <p class="p-desc">Where digital ideas step into the real world.</p>
+          <p class="p-more">A retro screen UI pulled out of the monitor and into a sunlit room, with the workflow behind it.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+    <section class="project" id="depth" data-layout="over" data-index="2" aria-labelledby="t-depth">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">03</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/depth.webp" data-src="./media/depth.mp4" aria-label="Depth, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">22.5s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>03</b><span>Transition study</span></p>
+          <h2 class="p-title" id="t-depth"><span class="word"><span class="ch">D</span><span class="ch">e</span><span class="ch">p</span><span class="ch">t</span><span class="ch">h</span></span></h2>
+          <p class="p-desc">A study in perspective, dimension and unexpected movement.</p>
+          <p class="p-more">Depth maps turned into transitions, so flat cuts get a sense of space.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+    <section class="project" id="lovart" data-layout="left" data-index="3" aria-labelledby="t-lovart">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">04</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/lovart.webp" data-src="./media/lovart.mp4" aria-label="Lovart, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">42.1s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>04</b><span>AI product spot</span></p>
+          <h2 class="p-title" id="t-lovart"><span class="word"><span class="ch">L</span><span class="ch">o</span><span class="ch">v</span><span class="ch">a</span><span class="ch">r</span><span class="ch">t</span></span></h2>
+          <p class="p-desc">A creative workflow brought to life through motion.</p>
+          <p class="p-more">Kinetic type, UI callouts and live footage cut together for the Lovart × Seedance launch.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+    <section class="project" id="mhd-labs-intro" data-layout="right" data-index="4" aria-labelledby="t-mhd-labs-intro">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">05</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/mhd-labs-intro.webp" data-src="./media/mhd-labs-intro.mp4" aria-label="MHD Labs Intro, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">23.0s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>05</b><span>Channel intro</span></p>
+          <h2 class="p-title" id="t-mhd-labs-intro"><span class="word"><span class="ch">M</span><span class="ch">H</span><span class="ch">D</span></span> <span class="word"><span class="ch">L</span><span class="ch">a</span><span class="ch">b</span><span class="ch">s</span></span> <span class="word"><span class="ch">I</span><span class="ch">n</span><span class="ch">t</span><span class="ch">r</span><span class="ch">o</span></span></h2>
+          <p class="p-desc">An introduction shaped by texture, light and movement.</p>
+          <p class="p-more">A fast tour of the studio’s visual language, built as an opener for the channel.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+    <section class="project" id="smooth-pack" data-layout="over" data-index="5" aria-labelledby="t-smooth-pack">
+      <div class="p-stage">
+        <span class="p-num-wrap" aria-hidden="true"><span class="p-num">06</span></span>
+        <figure class="p-media">
+         <div class="p-float">
+          <div class="p-frame">
+            <video class="p-video" muted loop playsinline autoplay preload="none" disablepictureinpicture disableremoteplayback controlslist="nodownload nofullscreen noremoteplayback" poster="./media/smooth-pack.webp" data-src="./media/smooth-pack.mp4" aria-label="Smooth Pack, looping motion design preview"></video>
+            <span class="crop tl" aria-hidden="true"></span><span class="crop tr" aria-hidden="true"></span><span class="crop bl" aria-hidden="true"></span><span class="crop br" aria-hidden="true"></span>
+          </div>
+          <figcaption class="p-timeline" aria-hidden="true">
+            <span class="tc">00:00:00:00</span>
+            <span class="track"><span class="head"></span></span>
+            <span class="len">19.2s · loop</span>
+          </figcaption>
+         </div>
+        </figure>
+        <div class="p-info">
+          <p class="p-kicker"><b>06</b><span>Template pack promo</span></p>
+          <h2 class="p-title" id="t-smooth-pack"><span class="word"><span class="ch">S</span><span class="ch">m</span><span class="ch">o</span><span class="ch">o</span><span class="ch">t</span><span class="ch">h</span></span> <span class="word"><span class="ch">P</span><span class="ch">a</span><span class="ch">c</span><span class="ch">k</span></span></h2>
+          <p class="p-desc">Smooth transitions and precise timing, made to flow.</p>
+          <p class="p-more">A product film for a pack of editable transitions, where every layer can be customized.</p>
+          <dl class="p-meta"><div><dt>Role</dt><dd>Design &amp; animation</dd></div><div><dt>Format</dt><dd>16:9 · 30 fps</dd></div></dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-row"><span>Motion</span><i>✦</i><span>Design</span><i>✦</i><span>Story</span><i>✦</i><span>Motion</span><i>✦</i><span>Design</span><i>✦</i><span>Story</span><i>✦</i></div>
+      </div>
+      <div class="c-stage">
+        <div class="c-copy">
+          <p class="c-eyebrow">Have something in mind?</p>
+          <h2 class="c-title" id="contactTitle"><span class="line"><span class="word"><span class="ch">L</span><span class="ch">e</span><span class="ch">t</span><span class="ch">’</span><span class="ch">s</span></span> <span class="word"><span class="ch">m</span><span class="ch">a</span><span class="ch">k</span><span class="ch">e</span></span></span><span class="line accent"><span class="word"><span class="ch">i</span><span class="ch">t</span></span> <span class="word"><span class="ch">m</span><span class="ch">o</span><span class="ch">v</span><span class="ch">e</span><span class="ch">.</span></span></span></h2>
+          <p class="c-text">Tell me what you’re working on. Pick a time on my calendar and we’ll talk it through on a call.</p>
+          <ul class="c-tools"><li>After Effects</li><li>Premiere Pro</li><li>Blender</li></ul>
+        </div>
+        <div class="c-action">
+          <a class="cta-orb" href="https://calendar.app.google/EygPvXTVFHdfKUzS7" target="_blank" rel="noopener noreferrer" data-booking>
+            <svg class="orb-ring" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="orbPath" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+              <text><textPath href="#orbPath">BOOK A CALL · LET’S TALK · BOOK A CALL · LET’S TALK · </textPath></text>
+            </svg>
+            <span class="orb-core"><span class="orb-label">Contact<br>me</span><svg class="orb-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+          <p class="c-note">Pick a time right here</p>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <a class="wordmark" href="#top" data-scroll aria-label="Back to the start">MHD<sup>®</sup></a>
+        <span>Good design. Even better in motion.</span>
+        <a href="#top" data-scroll>Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <div class="book" id="book" role="dialog" aria-modal="true" aria-labelledby="bookTitle" hidden data-lenis-prevent>
+    <div class="book-bg" aria-hidden="true"></div>
+    <button class="book-close" type="button" data-book-close aria-label="Close booking">Close <span aria-hidden="true">✕</span></button>
+
+    <aside class="book-side">
+      <span class="wordmark" aria-hidden="true">MHD<sup>®</sup></span>
+      <div class="book-intro">
+        <p class="book-eyebrow"><span class="pulse" aria-hidden="true"></span>Book a call</p>
+        <h2 class="book-title" id="bookTitle">Intro call <br>with Alireza</h2>
+        <dl class="book-facts">
+          <div><dt>Length</dt><dd data-duration>30 min</dd></div>
+          <div><dt>Where</dt><dd>Google Meet</dd></div>
+          <div><dt>Your time zone</dt><dd data-tz>—</dd></div>
+        </dl>
+      </div>
+      <div class="book-pick" aria-live="polite">
+        <span class="book-pick-label">Your slot</span>
+        <span class="book-pick-date" data-pick-date>Pick a day</span>
+        <span class="book-pick-time" data-pick-time>then a time</span>
+      </div>
+      <ol class="book-steps">
+        <li data-step-ind="1" class="is-on"><b>01</b>Day &amp; time</li>
+        <li data-step-ind="2"><b>02</b>Your details</li>
+        <li data-step-ind="3"><b>03</b>Confirmed</li>
+      </ol>
+    </aside>
+
+    <div class="book-main">
+      <p class="book-demo" data-demo hidden>Preview mode · bookings aren’t connected to Google Calendar yet</p>
+
+      <section class="book-step is-active" data-step="1" aria-label="Choose a day and time">
+        <div class="cal">
+          <div class="cal-head">
+            <h3 class="cal-month" data-month>—</h3>
+            <div class="cal-nav">
+              <button type="button" data-prev aria-label="Previous month">←</button>
+              <button type="button" data-next aria-label="Next month">→</button>
+            </div>
+          </div>
+          <div class="cal-week" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+          <div class="cal-grid" data-grid></div>
+          <p class="cal-legend"><i aria-hidden="true"></i>Days with open times</p>
+        </div>
+        <div class="slots">
+          <p class="slots-head" data-slots-head>Pick a day to see open times</p>
+          <div class="slots-list" data-slots></div>
+        </div>
+        <div class="book-state" data-state hidden>
+          <p data-state-text>Loading open times…</p>
+          <div class="book-state-actions" data-state-actions hidden>
+            <button type="button" class="ghost-btn" data-retry>Try again</button>
+            <a class="ghost-btn" href="https://calendar.app.google/EygPvXTVFHdfKUzS7" target="_blank" rel="noopener noreferrer">Open Google booking page ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="book-step" data-step="2" aria-label="Your details">
+        <form class="book-form" data-form novalidate>
+          <button type="button" class="book-back" data-back>← Change time</button>
+          <h3 class="form-title">Tell me a little<br>about <span>your project.</span></h3>
+          <div class="field-row">
+            <div class="field"><label for="bkName">Name</label><input id="bkName" name="name" autocomplete="name" maxlength="80" required placeholder="Your name"></div>
+            <div class="field"><label for="bkEmail">Email</label><input id="bkEmail" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="you@studio.com"></div>
+          </div>
+          <fieldset class="chips">
+            <legend>What’s it for? <i>optional</i></legend>
+            <label><input type="radio" name="kind" value="Motion graphics"><span>Motion graphics</span></label>
+            <label><input type="radio" name="kind" value="SaaS launch"><span>SaaS launch</span></label>
+            <label><input type="radio" name="kind" value="Tutorial"><span>Tutorial</span></label>
+            <label><input type="radio" name="kind" value="Something else"><span>Something else</span></label>
+          </fieldset>
+          <div class="field"><label for="bkNote">What are you working on? <i>optional</i></label><textarea id="bkNote" name="note" rows="3" maxlength="1500" placeholder="A launch video, a product reel, a deadline…"></textarea></div>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-error" data-form-error role="alert" hidden></p>
+          <button class="book-submit" type="submit"><span data-submit-label>Confirm booking</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+      </section>
+
+      <section class="book-step" data-step="3" aria-label="Booking confirmed">
+        <div class="done">
+          <svg class="done-check" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54"/><path d="M38 62l15 15 30-33"/></svg>
+          <h3 class="done-title">You’re booked.</h3>
+          <p class="done-when" data-done-when>—</p>
+          <p class="done-text" data-done-text>A calendar invite with the Google Meet link is on its way to your inbox.</p>
+          <a class="ghost-btn" data-meet href="#" target="_blank" rel="noopener noreferrer" hidden>Open Google Meet link ↗</a>
+          <button type="button" class="book-submit" data-book-close><span>Back to the site</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
